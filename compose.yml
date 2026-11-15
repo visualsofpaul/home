@@ -1,7 +1,7 @@
 name: home
 
 include:
-  - path: statcks/caddy/compose.yml
+  - path: stacks/caddy/compose.yml
     env_file: .env
   - path: stacks/glance/compose.yml
     env_file: .env
