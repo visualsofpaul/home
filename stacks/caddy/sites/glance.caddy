@@ -1,0 +1,15 @@
+{$DOMAIN} {
+  reverse_proxy glance:8080
+}
+
+http://{$DOMAIN} {
+  handle /ca.crt {
+    root * /data/caddy/pki/authorities/local
+    header Content-Type application/x-x509-ca-cert
+    header Content-Disposition "attachment; filename=ca.crt"
+    file_server
+  }
+  handle {
+    redir https://{host}{uri}
+  }
+}

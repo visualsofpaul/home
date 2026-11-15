@@ -1,0 +1,20 @@
+server:
+  assets-path: /app/assets
+
+branding:
+  app-name: "Home"
+  logo-text: "H"
+  hide-footer: true
+
+theme:
+  disable-picker: true
+
+  background-color: 0 0 8
+  primary-color: 0 0 75
+  positive-color: 150 35 55
+  negative-color: 0 50 60
+  contrast-multiplier: 1.1
+  text-saturation-multiplier: 0.5
+
+pages:
+  - $include: home.yml

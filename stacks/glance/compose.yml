@@ -1,0 +1,16 @@
+services:
+  glance:
+    image: glanceapp/glance:0.8.8
+    container_name: glance
+    restart: unless-stopped
+    environment:
+      DOMAIN: ${DOMAIN}
+      TZ: ${TZ}
+    volumes:
+      - ./config:/app/config
+      - ./assets:/app/assets
+    networks: [proxy]
+
+networks:
+  proxy:
+    external: true

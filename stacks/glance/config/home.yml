@@ -1,0 +1,54 @@
+- name: Home
+  columns:
+    - size: small
+      widgets:
+        - type: bookmarks
+          groups:
+            - title: Entertainment
+              links:
+                - title: Netflix
+                  url: https://netflix.com
+                  same-tab: true
+                - title: Prime Video
+                  url: https://primevideo.com
+                  same-tab: true
+                - title: YouTube
+                  url: https://youtube.com
+                  same-tab: true
+
+            - title: Apps
+              links:
+                - title: GitHub
+                  url: https://github.com
+                  same-tab: true
+
+    - size: full
+      widgets:
+        - type: monitor
+          cache: 1m
+          title: Services
+          sites:
+            - title: Home Assistant
+              url: https://homeassistant.home.lab
+              icon: si:homeassistant
+              allow-insecure: true
+            - title: Nextcloud
+              url: https://nextcloud.home.lab
+              icon: si:nextcloud
+              allow-insecure: true
+            - title: Vaultwarden
+              url: https://vaultwarden.home.lab
+              icon: si:vaultwarden
+              allow-insecure: true
+
+        - type: server-stats
+          servers:
+            - type: local
+              name: Server
+
+        - type: bookmarks
+          groups:
+            - title: Tools
+              links:
+                - title: Download CA Cert
+                  url: http://${DOMAIN}/ca.crt
